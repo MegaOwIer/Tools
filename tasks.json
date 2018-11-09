@@ -6,13 +6,13 @@
         {
             "label": "Compile & Run",
             "type": "shell",
-            "command": "python",
+            "command": "python3",
             "args": [
-                "${workspaceFolder}\\.vscode\\compile.py",
+                "${workspaceFolder}/.vscode/compile.py",
                 "${file}",
                 "&&",
-                "python",
-                "${workspaceFolder}\\.vscode\\run.py",
+                "python3",
+                "${workspaceFolder}/.vscode/run.py",
                 "${file}"
             ],
             "group": {
@@ -23,9 +23,9 @@
         {
             "label": "Run",
             "type": "shell",
-            "command": "python",
+            "command": "python3",
             "args": [
-                "${workspaceFolder}\\.vscode\\run.py",
+                "${workspaceFolder}/.vscode/run.py",
                 "${file}"
             ],
             "group": {
@@ -40,11 +40,10 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}",
+                "${fileDirname}/${fileBasenameNoExtension}",
                 "-g3",
                 "-Wall",
-                "-Wextra",
-                "-fno-stack-limit"
+                "-Wextra"
             ]
         }
     ]

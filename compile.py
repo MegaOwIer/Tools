@@ -35,7 +35,7 @@ def cppCompile():
     lb = ttk.Label(compileOptions, text = 'Extra Compile Options:')
     lb.grid(column = 0, row = 2, columnspan = 2, sticky = 'w')
     extra = StringVar()
-    extra.set('-Wall -Wextra -fno-stack-limit')
+    extra.set('-Wall -Wextra')
     extraset = Entry(compileOptions, textvariable = extra, width = 40)
     extraset.grid(column = 0, row = 3, columnspan = 2, sticky = 'w')
 
@@ -55,9 +55,9 @@ def cppCompile():
         if grader.get() == 'No':
             command = F'g++ {fileName} -o {baseName} -std={standard.get()} {optimize.get()} {extra.get()}\n'
         else:
-            command = F'g++ {fileName} {dirName}\\grader.cpp -o {baseName} -std={standard.get()} {optimize.get()} {extra.get()}\n'
+            command = F'g++ {fileName} {dirName}/grader.cpp -o {baseName} -std={standard.get()} {optimize.get()} {extra.get()}\n'
         compileOptions.destroy()
-        print(command)
+        print('> ' + command)
         compileres = os.system(command)
 
     Button(compileOptions, text = 'Go!', command = on_click).grid(column = 0, row = 5, columnspan = 2)

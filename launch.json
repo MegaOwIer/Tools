@@ -14,7 +14,7 @@
             "name": "C++ Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
