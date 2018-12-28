@@ -59,12 +59,19 @@ class cppCompile:
     
     def on_click(self, argv = list()):
         if self.grader.get() == 'No':
-            command = F'g++ {fileName} -o {baseName} -std={self.standard.get()} {self.optimize.get()} {self.extra.get()}\n'
+            command = F'g++ {fileName} -o {baseNameNoExt} -std={self.standard.get()} {self.optimize.get()} {self.extra.get()}\n'
         else:
-            command = F'g++ {fileName} {dirName}\\grader.cpp -o {baseName} -std={self.standard.get()} {self.optimize.get()} {self.extra.get()}\n'
+            command = F'g++ {fileName} grader.cpp -o {baseNameNoExt} -std={self.standard.get()} {self.optimize.get()} {self.extra.get()}\n'
         print(command)
         self.compileOptions.destroy()
-        self.compileres = os.system(command)
+        self.compileres = os.system(F'cd {dirName} && {command}')
+
+
+class javaCompile:
+    def __init__(self):
+        command = F'javac {baseNameNoExt}.java\n'
+        self.compileres = os.system(F'cd {dirName} && {command}')
+        print(command)
 
 
 def terminate(s, exitcode = -1):
@@ -73,10 +80,10 @@ def terminate(s, exitcode = -1):
 
 
 if __name__ == "__main__":
-    global fileName, dirName, baseName
+    global fileName, dirName, baseNameNoExt
     fileName = argv[1]
     dirName = os.path.dirname(fileName)
-    baseName = os.path.splitext(fileName)[0]
+    baseNameNoExt = os.path.splitext(os.path.basename(fileName))[0]
     if fileName.endswith(".cpp"):
         if cppCompile().compileres:
             terminate("Compile Error")
@@ -84,3 +91,8 @@ if __name__ == "__main__":
             print("---Compile Success---")
     elif fileName.endswith(".py"):
         pass
+    elif fileName.endswith(".java"):
+        if javaCompile().compileres:
+            terminate("Compile Error")
+        else:
+            print("---Compile Success---")

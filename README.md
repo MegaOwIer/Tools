@@ -1,6 +1,6 @@
 # Summary
 This is my configuation files of VSCode for Windows.
-It already has supported `C++` and `Python`.
+It has already supported `C++`, `Python` and `Java`.
 
 
 # Requirs
