@@ -70,8 +70,8 @@ class cppCompile:
 class javaCompile:
     def __init__(self):
         command = F'javac {baseNameNoExt}.java\n'
-        self.compileres = os.system(F'cd {dirName} && {command}')
         print(command)
+        self.compileres = os.system(F'cd {dirName} && {command}')
 
 
 def terminate(s, exitcode = -1):
