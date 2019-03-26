@@ -9,12 +9,11 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
-                "${fileDirname}"
             ],
             "defines": [
                 "__LOCAL_DEBUG__"
             ],
-            "compilerPath": "E:\\MinGW64\\mingw64\\bin\\g++.exe",
+            "compilerPath": "E:\\MinGW\\mingw64\\bin\\g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++14",
             "intelliSenseMode": "gcc-x64"

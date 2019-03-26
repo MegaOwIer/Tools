@@ -1,2 +1,7 @@
 launch.json
 c_cpp_properties.json
+settings.json
+
+# ipch fles
+
+/ipch
