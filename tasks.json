@@ -44,7 +44,7 @@
                 "-g3",
                 "-Wall",
                 "-Wextra",
-                "-fno-stack-limit"
+                "-Wl,--stack=1024000000"
             ]
         }
     ]
