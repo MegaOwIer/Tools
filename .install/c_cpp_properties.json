@@ -9,15 +9,14 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
-                "${fileDirname}"
             ],
             "defines": [
                 "__LOCAL_DEBUG__"
             ],
             "compilerPath": "/usr/bin/g++-7",
             "cStandard": "c11",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "clang-x64"
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4

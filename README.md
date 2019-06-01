@@ -15,9 +15,11 @@ git clone -b VSCode-Configuration-File-for-Ubuntu https://github.com/MegaOwIer/T
 
 ```
 
-Here are some items might need to modify before you use it:
-+ Line 17 of `./c_cpp_properties.json` (path of your C/C++ compiler)
-+ Line 37 of `./settings.json` (path of your Python)
+Then, open terminal in the directory `.vscode` and execute the following command to install the scripts.
+
+```sh
+cd .install && python3 install.py
+```
 
 You can also change other things to make it adapt your personal habits.
 
