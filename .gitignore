@@ -1,9 +1,12 @@
-c_cpp_properties.json
-settings.json
-*.code-snippets
-
+# pycache
 __pycache__/
 
-# ipch files
+# personal files
+/c_cpp_properties.json
+/settings.json
+/launch.json
+/*.code-snippets
 
-/ipch
+# misc
+ipch/
+.DS_Store/

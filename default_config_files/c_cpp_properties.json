@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "E:\\MinGW\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "${workspaceFolder}\\include"
+            ],
+            "defines": [
+                "__LOCAL_DEBUG__"
+            ],
+            "compilerPath": "E:\\MinGW\\mingw64\\bin\\g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
