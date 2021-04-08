@@ -1,6 +1,8 @@
-launch.json
 c_cpp_properties.json
 settings.json
+*.code-snippets
+
+__pycache__/
 
 # ipch files
 

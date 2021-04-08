@@ -6,13 +6,13 @@
         {
             "label": "Compile & Run",
             "type": "shell",
-            "command": "python",
+            "command": "cd",
             "args": [
-                "${workspaceFolder}\\.vscode\\scripts\\compile.py",
-                "${file}",
+                "${workspaceFolder}\\.vscode",
                 "&&",
                 "python",
-                "${workspaceFolder}\\.vscode\\scripts\\run.py",
+                "-m",
+                "builder",
                 "${file}"
             ],
             "group": {
@@ -23,10 +23,15 @@
         {
             "label": "Run",
             "type": "shell",
-            "command": "python",
+            "command": "cd",
             "args": [
-                "${workspaceFolder}\\.vscode\\scripts\\run.py",
-                "${file}"
+                "${workspaceFolder}\\.vscode",
+                "&&",
+                "python",
+                "-m",
+                "builder",
+                "${file}",
+                "--no-compile"
             ],
             "group": {
                 "kind": "test",
@@ -44,7 +49,9 @@
                 "-g3",
                 "-Wall",
                 "-Wextra",
-                "-Wl,--stack=1024000000"
+                "-Wconversion",
+                "-Wshadow",
+                "-Wl,--stack=1048576000"
             ]
         }
     ]
